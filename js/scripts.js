@@ -16,9 +16,10 @@ function throwDice() {
     let dice = Math.floor(Math.random() * 6) + 1;
     if (dice !== 1) {
       score = score += dice;
-    } else {
+    } else if(dice === 1) {
       window.alert("Oops you rolled a 1... Next player!");
       init();
+      switchPlayer();
     }
     } else {
     window.alert("You won!");
@@ -31,4 +32,16 @@ function init() {
   tempScore = 0;
   score = 0;
   window.alert(tempScore);
+}
+
+function switchPlayer() {
+  if (player > 0) {
+    player = 0;
+    console.log(player);
+    return player;
+  } else {
+    player = 1;
+    console.log(player);
+    return player;
+  }
 }
