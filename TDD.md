@@ -16,7 +16,8 @@ Expected Output: "You won!"
 Test: "It should return an alert when a 1 is rolled"
 Code: throwDice()
 Expected Output: "Oops you rolled a 1... Next player!"
-
+```
+```
 Describe: init()
 
 Test: "It should reset score to 0 when a 1 is rolled"
