@@ -12,4 +12,8 @@ Expected Output: "oldScore + roll = newScore;"
 Test: "It should return an alert when score < 30"
 Code: throwDice()
 Expected Output: "You won!"
+
+Test: "It should return an alert when a 1 is rolled"
+Code: throwDice()
+Expected Output: "Oops you rolled a 1... Next player!"
 ```
