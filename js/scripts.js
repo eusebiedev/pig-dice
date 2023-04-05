@@ -10,12 +10,12 @@
 //   return score;
 // }
 
-let score = 0;
+let totalScore = 0;
 function throwDice() {
-  if (score < 30) {
+  if (totalScore < 30) {
     let dice = Math.floor(Math.random() * 6) + 1;
     if (dice !== 1) {
-      score = score += dice;
+      totalScore = totalScore += dice;
     } else if(dice === 1) {
       window.alert("Oops you rolled a 1... Next player!");
       init();
@@ -25,12 +25,12 @@ function throwDice() {
     window.alert("You won!");
     init();
   }
-  return score;
+  return totalScore;
 }
 
 function init() {
   tempScore = 0;
-  score = 0;
+  totalScore = 0;
   window.alert(tempScore);
 }
 
@@ -45,3 +45,9 @@ function switchPlayer() {
     return player;
   }
 }
+// ///WIP
+// function playerHold(tempScore, totalScore) {
+//   totalScore = totalScore + tempScore;
+//   switchPlayer();
+// }
+// ///
