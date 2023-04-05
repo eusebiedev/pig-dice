@@ -1,4 +1,6 @@
+let score = 0;
 function throwDice() {
   let dice = Math.floor(Math.random() * 6) + 1;
-  return dice;
+  score = score += dice;
+  return score;
 }
