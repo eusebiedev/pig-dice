@@ -23,5 +23,10 @@ Describe: init()
 Test: "It should reset score to 0 when a 1 is rolled"
 Code: init()
 Expected Output: "Current score is initialized to 0 when a 1 is rolled"
-
 ```
+```
+Describe: switchPlayer()
+
+Test: "It should switch players when a 1 is rolled"
+Code: switchPlayer()
+Expected Output: "Player is switched from 0 to 1"
