@@ -9,4 +9,7 @@ Test: "It should add the current dice value to the temporary score"
 Code: throwDice();
 Expected Output: "oldScore + roll = newScore;"
 
+Test: "It should return an alert when score < 30"
+Code: throwDice()
+Expected Output: "You won!"
 ```
