@@ -10,13 +10,57 @@
 //   return score;
 // }
 
-let totalScore = 0;
+// let totalScore = [0, 0];
+// function throwDice() {
+//   if (totalScore < 30) {
+//     let dice = Math.floor(Math.random() * 6) + 1;
+//     if (dice !== 1) {
+//       totalScore = totalScore += dice;
+//     } else if(dice === 1) {
+//       window.alert("Oops you rolled a 1... Next player!");
+//       init();
+//       switchPlayer();
+//     }
+//     } else {
+//     window.alert("You won!");
+//     init();
+//   }
+//   return totalScore;
+// }
+
+// function init() {
+//   tempScore = 0;
+//   totalScore = 0;
+//   window.alert(tempScore);
+// }
+
+// function switchPlayer() {
+//   if (player > 0) {
+//     player = 0;
+//     console.log(player);
+//     return player;
+//   } else {
+//     player = 1;
+//     console.log(player);
+//     return player;
+//   }
+// }
+
+// function playerHold(tempScore, totalScore) {
+//   totalScore = totalScore + tempScore;
+//   switchPlayer();
+// }
+
+let totalScore = [0, 0];
+let player;
 function throwDice() {
-  if (totalScore < 30) {
+  if (totalScore[0] < 30 && totalScore[1] < 30) {
     let dice = Math.floor(Math.random() * 6) + 1;
-    if (dice !== 1) {
-      totalScore = totalScore += dice;
-    } else if(dice === 1) {
+    if (dice !== 1 && player === 0) {
+      totalScore[0] += dice;
+    } else if(dice !== 1 && player === 1) {
+      totalScore[1] += dice;
+    } else if (dice === 1) {
       window.alert("Oops you rolled a 1... Next player!");
       init();
       switchPlayer();
@@ -30,24 +74,20 @@ function throwDice() {
 
 function init() {
   tempScore = 0;
-  totalScore = 0;
-  window.alert(tempScore);
+  return tempScore;
 }
 
 function switchPlayer() {
   if (player > 0) {
     player = 0;
-    console.log(player);
     return player;
   } else {
     player = 1;
-    console.log(player);
     return player;
   }
 }
-// ///WIP
-// function playerHold(tempScore, totalScore) {
-//   totalScore = totalScore + tempScore;
-//   switchPlayer();
-// }
-// ///
+
+function playerHold() {
+  totalScore[player] += tempScore; 
+  return switchPlayer();
+}
