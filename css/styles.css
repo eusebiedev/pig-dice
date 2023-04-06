@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  background-color: cadetblue;
+
+}
+
+.container {
+  
+  height: 600px;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* .btn-new { 
+  top: ;
+}
+
+.btn-roll {
+  position: ;
+  bottom: ;
+}
+
+.btn-hold {
+  position: ;
+  bottom: ;
+} */
+.player-1 {
+  text-align: center;
+  box-sizing: border-box;
+  border: 1px solid black;
+  
+}
+.player-2 {
+  text-align: center;
+  box-sizing: border-box;
+  border: 1px solid black;
+  
+}
+
+
+
+
+
+
