@@ -52,18 +52,25 @@
 // }
 
 let totalScore = [0, 0];
+let tempScore = 0;
 let player;
 function throwDice() {
-  if (totalScore[0] < 30 && totalScore[1] < 30) {
+  if (totalScore[0] + tempScore < 30 && totalScore[1] + tempScore < 30) {
     let dice = Math.floor(Math.random() * 6) + 1;
+    console.log("Current Player:" + player);
+    console.log("The dice rolled:" + dice);
     if (dice !== 1 && player === 0) {
-      totalScore[0] += dice;
-    } else if(dice !== 1 && player === 1) {
-      totalScore[1] += dice;
+      tempScore += dice;
+      console.log("Temp Score Player 0: " + tempScore);
+    } else if (dice !== 1 && player === 1) {
+      tempScore += dice;
+      console.log("Temp Score Player 1: " + tempScore);
     } else if (dice === 1) {
       window.alert("Oops you rolled a 1... Next player!");
       init();
+      console.log("Temp Score: " + tempScore);
       switchPlayer();
+      console.log("Its player" + player + "'s turn!");
     }
     } else {
     window.alert("You won!");
@@ -88,6 +95,11 @@ function switchPlayer() {
 }
 
 function playerHold() {
-  totalScore[player] += tempScore; 
+  totalScore[player] += tempScore;
+  init();
+  console.log("Its player " + player + "'s turn!");
+  console.log("Total Scores: ");
+  console.log("Player 0: " + totalScore[0]);
+  console.log("Player 1: " + totalScore[1]);
   return switchPlayer();
 }
