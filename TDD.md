@@ -16,6 +16,13 @@ Expected Output: "You won!"
 Test: "It should return an alert when a 1 is rolled"
 Code: throwDice()
 Expected Output: "Oops you rolled a 1... Next player!"
+
+Test: "It should end the game when totalScore + tempScore < 30"
+Code: 
+tempScore = 15;
+totalScore = 15;
+throwDice();
+Expected Output: "You Won!"
 ```
 ```
 Describe: init()
@@ -37,3 +44,4 @@ Describe: playerHold()
 Test: "It should add current score to total score"
 Code: playerHold ()
 Exepected Output:"Players score is totalled and switches players"
+
