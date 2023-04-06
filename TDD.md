@@ -30,3 +30,10 @@ Describe: switchPlayer()
 Test: "It should switch players when a 1 is rolled"
 Code: switchPlayer()
 Expected Output: "Player is switched from 0 to 1"
+```
+```
+Describe: playerHold()
+
+Test: "It should add current score to total score"
+Code: playerHold ()
+Exepected Output:"Players score is totalled and switches players"
